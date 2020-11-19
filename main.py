@@ -241,7 +241,9 @@ for i,item in enumerate(users):
                         comment_count = value + 1
                 d.update({k:comment_count})
 
-print(d)
+for key, value in d.items():
+    if value > 10:
+        print("Пользователь, имеющий id {0} оставил {1} сообщений".format(key, value))
 """Простейшая система проверки орфографии может быть основана на использовании списка известных слов.
 Если введённое слово не найдено в этом списке, оно помечается как "ошибка".
 
